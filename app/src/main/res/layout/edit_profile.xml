@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_back"
+        android:background="@android:color/transparent"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintMarginStart="16dp"
+        app:layout_constraintMarginTop="24dp" />
+
+    <TextView
+        android:id="@+id/tv_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:text="Edit Profile"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/iv_backButton"
+        app:layout_constraintBottom_toBottomOf="@id/iv_backButton"/>
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/avt"
+        android:background="@drawable/circle_avatar"
+        app:layout_constraintTop_toBottomOf="@id/tv_edit_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"/>
+
+
+    <ImageView
+        android:id="@+id/iv_change_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/ic_camera"
+        app:layout_constraintTop_toBottomOf="@id/iv_avatar"
+        app:layout_constraintEnd_toEndOf="@id/iv_avatar"
+        app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+        app:layout_constraintStart_toEndOf="@id/iv_avatar"
+        android:layout_marginTop="-25dp"
+        android:layout_marginStart="8dp"
+        android:clickable="true"/>
+
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Name"
+        android:background="@drawable/round_edit_profile"
+        android:textColorHint="#544C4C"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/iv_change_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/edt_name"
+        android:background="@drawable/round_edit_profile"
+        android:hint="Email"
+        android:textColorHint="#544C4C"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/edt_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:maxWidth="488dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/edt_email"
+        android:layout_margin="16dp"
+        android:hint="Password"
+        android:background="@drawable/round_edit_profile"
+        android:inputType="textPassword"
+        android:textColorHint="#544C4C"
+        app:layout_constraintTop_toBottomOf="@id/edt_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:maxWidth="488dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <EditText
+        android:id="@+id/edt_edit_date_and_birth"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/edt_password"
+        android:layout_margin="16dp"
+        android:background="@drawable/round_edit_profile"
+        android:hint="Date of Birth"
+        android:textColorHint="#544C4C"
+        android:inputType="datetime"
+        app:layout_constraintTop_toBottomOf="@id/edt_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:maxWidth="488dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Changes"
+        app:layout_constraintTop_toBottomOf="@id/edt_edit_date_and_birth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

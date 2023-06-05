@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <ImageView
+            android:id="@+id/iv_cover_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/photo_cover" />
+
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="347dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_setting" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_avatar_container"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginStart="16dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_avatar">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avt" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_name_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fl_avatar_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Dương Rêu"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btn_edit_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Edit Profile" />
+
+    <TextView
+        android:id="@+id/tv_like_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_edit_profile"
+        android:text="Likes"
+        android:textColor="#9B9494"
+        android:layout_marginStart="46dp"
+        android:textStyle="bold"
+        android:textSize="14sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/tv_like_profile"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_favorites_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_like_profile"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="46dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/btn_edit_profile"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:spanCount="3" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#E7BABA"
+        app:itemIconTint="#BF2E2E"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/navigation_menu" />
+
+</RelativeLayout>
